@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+</head>
+<body>
+    <div>
+        <p><b style="font-size: 20px">Оператор SELECT</b></p>
+        SELECT name, appearance
+        <br />
+        FROM superheroes
+        <br />
+        <br />
+        SELECT name AS hero_name, appearance
+        <br />
+        FROM superheroes
+        <br />
+        <br />
+        SELECT DISTINCT(align)
+        <br />
+        FROM superheroes
+    </div>
+    <div>
+        <p><b style="font-size: 20px">Ограниченный список элементов</b></p>
+        SELECT DISTINCT(align)
+        <br />
+        FROM superheroes
+        <br />
+        LIMIT 10
+        <br />
+        <br />
+        DISTINCT - выбор уникального элеметна
+        <br />
+        LIMIT - ограниченное значение извлекаемых строк
+        <br />
+        AS - создать псевдоним
+        <br />
+        <br />
+        SELECT *
+        <br />
+        FROM superheroes
+        <br />
+        WHERE align="Famile Characters"
+    </div>
+    <div>
+        
+        <p><b style="font-size: 20px">Операторы сравнения</b></p>
+        SELECT *
+        <br />
+        FROM superheroes
+        <br />
+        WHERE year BETWEEN 2000 AND 2005
+        <br />
+        <br />
+        BETWEEN - значение находиться в указанном диапазоне
+        <br />
+        IN - значение входит в список
+        <br />
+        LIKE - проверка строк на соответствие шаблона
+        <br />
+        % - любое колличество символов
+        <br />
+        _- ровно один любой символ
+    </div>
+    <div>
+        <p><b style="font-size: 20px">Логический оператор в WHERE</b></p>
+        SELECT *
+        <br />
+        FROM superheroes
+        <br />
+        WHERE gender="Female Characters"
+        <br />
+        AND 
+        <br />
+        align="Bad Characters"
+        <br />
+        ORDER BY appearance DESC
+        <br />
+        <br />
+        AND - "И"
+        <br />
+        OR - "или"
+        <br />
+        NOT - "нет"
+    </div>
+    <div>
+        <p><b style="font-size: 20px">Сортировка и фильтры в select</b></p>
+        SELECT *
+        <br />
+        FROM superheroes
+        <br />
+        WHERE align="Bad Characters"
+        <br />
+        ORDER BY appearance DESC
+        <br />
+        <br />
+        DESC(descending) - сортировка по убыванию
+        <br />
+        ASC(ascending) - сортировка по возрастанию
+    </div>
+    <div>
+        <p><b style="font-size: 20px">Ограничить колличество строк</b></p>
+        SELECT *
+        <br />
+        FROM superheroes
+        <br />
+        WHERE align="Bad Characters"
+        <br />
+        AND gender = "Female Characters"
+        <br />
+        ORDER BY appearance DESC
+        <br />
+        LIMIT 5
+    </div>
+    <div>
+        <p><b style="font-size: 20px">Сортировка по нескольким столбцам</b></p>
+        SELECT *
+        <br />
+        FROM superheroes
+        <br />
+        ORDER BY year, appearances
+    </div>
+</body>
+</html>
