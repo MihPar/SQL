@@ -29,7 +29,7 @@ CREATA TABLE  superheroes(
 
 -- Вставка данных в таблицу
 INSERT INTO superheroes(name, appearance, univers)
-VALUE("Spader_man", 4034, "marvel")
+VALUES("Spader_man", 4034, "marvel")
 
 -- Изменение данных в таблице
 UPDATE superheroes
@@ -49,3 +49,7 @@ DELETE FROM superheroes
 WHERE gender = 'Male Characters'
 -------------------------------------------------------------
 DELETE FROM superheroes
+-------------------------
+DROP TABLE superheroes
+---------------------
+COPY superheroes FROM '/home/user/superheroes'
